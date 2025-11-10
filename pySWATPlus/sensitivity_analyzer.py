@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import numpy
 import SALib.sample.sobol
 import SALib.analyze.sobol
@@ -18,7 +20,7 @@ from . import cpu
 
 class SensitivityAnalyzer:
     '''
-    Provide functionality for sensitivity analyzis.
+    Provide functionality for sensitivity analysis.
     '''
 
     def _create_sobol_problem(
@@ -76,7 +78,7 @@ class SensitivityAnalyzer:
                             v['date'] = v['date'].apply(lambda x: x.strftime('%d-%b-%Y'))
                             copy_simulation[key][sub_key][k] = v.to_json()
 
-        # Path to the JOSN file
+        # Path to the JSON file
         json_file = sensim_dir / 'sensitivity_simulation.json'
 
         # Write output to the JSON file
@@ -202,7 +204,7 @@ class SensitivityAnalyzer:
                 will be deleted dynamically after collecting the required data.
 
         Returns:
-            Dictionary with the follwoing keys:
+            Dictionary with the following keys:
 
                 - `time`: A dictionary containing time-related statistics:
 
@@ -366,7 +368,7 @@ class SensitivityAnalyzer:
             'time_per_sample_sec': round(required_time / len(sample_array), 1),
         }
 
-        # Sensitivity simulaton output
+        # Sensitivity simulation output
         sensim_output = {
             'time': time_stats,
             'problem': problem,

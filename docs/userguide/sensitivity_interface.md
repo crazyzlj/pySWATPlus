@@ -48,6 +48,7 @@ sim_reader.run_swat(
     print_prt_control={
         'channel_sd': {}
     }  # enable daily time series for 'channel_sd'
+)
 ```
 
 ## Sensitivity Simulation
@@ -102,7 +103,7 @@ if __name__ == '__main__':
         parameters=parameters,
         sample_number=1,
         sensim_dir=r"C:\Users\Username\simulation_folder",
-        txtinout_folder=sim_dir,
+        txtinout_dir=sim_dir,
         extract_data=extract_data
     )
     print(output)

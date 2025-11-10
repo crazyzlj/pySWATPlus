@@ -12,7 +12,7 @@ the calibration interface offers flexible options for optimizing model parameter
 
     - Single-objective algorithms
     
-        - Genetic Alogorithm
+        - Genetic Algorithm
         - [Differential Evolution Algorithm](https://doi.org/10.1007/3-540-31306-0)
         
     - Multi-objective algorithms
@@ -38,7 +38,7 @@ which performs parameter optimization using multi-objective algorithms, evolutio
 
 The following code provides an example of optimizing flow discharge for both daily and monthly time-series data using multi-objective evolutionary computation.
 The usage of both daily and monthly flow discharge is just for illustrative purposes on how multi-objective optimization can be performed. Users should replace monthly flow
-discharge by nitorgen or phosporus concentration according to their needs.
+discharge by nitrogen or phosphorus concentration according to their needs.
 
 
 ```python

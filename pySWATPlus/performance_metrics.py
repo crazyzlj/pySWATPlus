@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import pandas
 import pathlib
 import typing
@@ -7,7 +9,7 @@ from . import validators
 
 class PerformanceMetrics:
     '''
-    Provide functionality to compute errors between simulated and ovserved values.
+    Provide functionality to compute errors between simulated and observed values.
     '''
 
     @property
@@ -333,7 +335,7 @@ class PerformanceMetrics:
         for indicator in indicators:
             if indicator not in abbr_indicator:
                 raise ValueError(
-                    f'Invalid name "{indicator}" in "indicatiors" list; expected names are {list(abbr_indicator.keys())}'
+                    f'Invalid name "{indicator}" in "indicators" list; expected names are {list(abbr_indicator.keys())}'
                 )
 
         # Observed DataFrame
